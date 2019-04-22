@@ -1,0 +1,9 @@
+[webservers]
+  webserver1  ansible_host=18.216.174.46 
+
+[py3-hosts]
+  webserver1
+ #zabbix1
+
+[py3-hosts:vars]
+  ansible_python_interpreter=/usr/bin/python3
