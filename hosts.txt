@@ -1,5 +1,5 @@
 [webservers]
-  webserver1  ansible_host=18.216.174.46 
+  webserver1  ansible_host=18.219.226.9
 
 [py3-hosts]
   webserver1
