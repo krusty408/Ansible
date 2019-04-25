@@ -32,4 +32,4 @@
     shell: cd /home/ubuntu/webserver
     
   - name: Running Docker-Compose file
-    shell: ll
+    shell: ls -la
