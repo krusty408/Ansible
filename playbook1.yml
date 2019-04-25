@@ -25,13 +25,13 @@
     #notify:
     #  - start git
     
-  - name: Starting Docker service
+  - name: Starting Docker
     service: docker
     status: started
     
-  - name: Starting Git service
-    service: git
-    status: started    
+#  - name: Starting Git service
+#    service: git
+#    status: started    
   
   - name: Getting Git Repository for Web Server
     shell: git clone https://github.com/krusty408/webserver
