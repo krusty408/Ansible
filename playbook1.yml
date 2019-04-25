@@ -1,4 +1,12 @@
 ---
+- name: Update and upgrade apt packages
+  become: true
+  apt:
+    upgrade: yes
+    update_cache: yes
+    become: yes
+    
+    
 - name: Install Docker, Docker-Compose, Jenkins Agent
   hosts: all
   become: yes
