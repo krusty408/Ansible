@@ -27,3 +27,9 @@
   
   - name: Getting Git Repository for Web Server
     shell: git clone https://github.com/krusty408/webserver
+    
+  - name: Changing Directory
+    shell: cd /home/ubuntu/webserver
+    
+  - name: Running Docker-Compose file
+    shell: docker-compose up --build -d
