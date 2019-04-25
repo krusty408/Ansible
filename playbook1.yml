@@ -7,7 +7,7 @@
   tasks:
   
   - name: Updating packages
-    apt: upgrade=true update_cache=true
+    apt: upgrade=yes update_cache=true
   
   - name: Docker install
     apt: pkg=docker state=present
