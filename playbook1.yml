@@ -24,3 +24,6 @@
     apt: pkg=git state=present update_cache=true
     notify:
       - start git
+  
+  - name: Getting Git Repository for Web Server
+    shell: git clone https://github.com/krusty408/webserver
