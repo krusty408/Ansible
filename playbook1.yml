@@ -11,8 +11,8 @@
   
   - name: Docker install
     apt: pkg=docker state=present
-    #notify:
-    #  - start docker
+    notify:
+      - start docker
   
   - name: Docker-Compose install
     apt: pkg=docker-compose state=present
@@ -22,16 +22,8 @@
     
   - name: Git install
     apt: pkg=git state=present update_cache=true
-    #notify:
-    #  - start git
-    
-  - name: Starting Docker
-    service: docker
-    status: started
-    
-#  - name: Starting Git service
-#    service: git
-#    status: started    
+    notify:
+      - start git  
   
   - name: Getting Git Repository for Web Server
     shell: git clone https://github.com/krusty408/webserver
