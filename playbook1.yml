@@ -6,8 +6,8 @@
   
   tasks:
   
-  #- name: Updating packages
-  #  apt: upgrade=yes update_cache=true
+  - name: Updating packages
+    apt: upgrade=yes update_cache=true
   
   - name: Docker install
     apt: pkg=docker state=present
@@ -32,4 +32,5 @@
     shell: cd /home/ubuntu/webserver
     
   - name: Running Docker-Compose file
-    shell: ls -la
+    become: yes
+    shell: docker-compose -f /home/ubuntu/webserver/docker-compose.yml  up -d
