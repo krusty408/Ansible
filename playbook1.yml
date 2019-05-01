@@ -11,8 +11,8 @@
   
   - name: Docker install
     apt: pkg=docker state=present
-    notify:
-      - start docker
+    #notify:
+    #  - start docker
   
   - name: Docker-Compose install
     apt: pkg=docker-compose state=present
